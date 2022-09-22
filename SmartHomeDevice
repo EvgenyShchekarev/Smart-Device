@@ -182,14 +182,7 @@ class RangeRequlator(
     private val maxValue: Int
 ) : ReadWriteProperty<Any?, Int> {
     
-    // Это свойство дейтсвует как резервное поле для переменной
     private var fieldData = initialValue
-    
-    // Эти методы действуют как функции get() и set() свойств.
-    
-    // Это KProperty интерфейс, который представляет объявленное свойство и 
-    // позволяет получить доступ к метаданным делегированного свойства.  
-    
     
     override fun getValue(thisRef: Any?, property: KProperty<*>): Int {
         return fieldData
